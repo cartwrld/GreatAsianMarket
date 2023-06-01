@@ -3,9 +3,244 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- Bootstrap - Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css">
+    <script src="bootstrap-5.0.2-dist/js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzUFkqwX5Nsd9WYQnLIldk709WbFrxVrk&callback=initMap"></script>
+
     <title>Title</title>
+    <style>
+        li {
+            text-wrap: none;
+        }
+        .list-group-item a {
+            color: black;
+            text-decoration: none;
+        }
+        footer a {
+            color: ghostwhite;
+        }
+
+        .nav-separator {
+            /*line-height: 15px;*/
+            font-size: 2em;
+            color: rgba(185, 185, 185, 0.57);
+            font-weight: lighter;
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gamscripts.js" defer></script>
 </head>
 <body>
 
+<!--<header>-->
+<nav class="navbar navbar-expand-lg bg-success navbar-dark sticky-top rounded-bottom">
+    <div class="container">
+
+        <div class="container text-center">
+            <a class=href="#">
+                <img src="media/GAM_logo.png" alt="GAM Logo" style="width:135px;">
+            </a>
+            <div class="container-fluid-xxl">
+                <div class="navbar-text text-center h2 h6-xl">Great Asian Market</div>
+            </div>
+        </div>
+        <div class="container-fluid collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav container h5">
+                <li class="text-center text-light d-flex flex-row justify-content-center align-items-center">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="mt-2 px-2">
+                    <span class="nav-separator d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">|</span>
+                </li>
+                <li class="nav-item text-center d-flex flex-row justify-content-center align-items-center">
+                    <a class="nav-link" href="promotions.html">Promotions</a>
+                </li>
+                <li class="mt-2 px-2">
+                    <span class="nav-separator d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">|</span>
+                </li>
+                <li class="nav-item text-center d-flex flex-row justify-content-center align-items-center">
+                    <a class="nav-link" href="productcatalog.html">Product Catalog</a>
+                </li>
+                <li class="mt-2 px-2">
+                    <span class="nav-separator d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">|</span>
+                </li>
+                <li class="nav-item text-center d-flex flex-row justify-content-center align-items-center">
+                    <a class="nav-link" href="franchise.html">Franchise Opportunities</a>
+                </li>
+                <li class="mt-2 px-2">
+                    <span class="nav-separator d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block">|</span>
+                </li>
+                <li class="nav-item text-center d-flex flex-row justify-content-center align-items-center">
+                    <a class="nav-link" id="contactUsNavItem" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler mt-xl-3" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<!--</header>-->
+
+
+<div class="container col4">
+    <div class="row">Product List</div>
+    <div class="container">
+
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#rice_grains" role="button" aria-expanded="false" aria-controls="rice_grains">
+                    Rice and Grains <i class="bi bi-caret-right"></i>
+                </a>
+                <div class="collapse" id="rice_grains">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Rice</a></li>
+                        <li class="list-group-item"><a href="#">Rice noodles, vermicelli</a></li>
+                        <li class="list-group-item"><a href="#">Noodles and Pasta</a></li>
+                        <li class="list-group-item"><a href="#">Instant noodles</a></li>
+                        <li class="list-group-item"><a href="#">Wheat noodles</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#sauce_condiments" role="button" aria-expanded="false" aria-controls="sauce_condiments">
+                    Sauces and Condiments
+                </a>
+                <div class="collapse" id="sauce_condiments">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Soy sauce</a></li>
+                        <li class="list-group-item"><a href="#">Fish sauce</a></li>
+                        <li class="list-group-item"><a href="#">Oyster sauce</a></li>
+                        <li class="list-group-item"><a href="#">Hoisin sauce</a></li>
+                        <li class="list-group-item"><a href="#">Chili sauce</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#snacks" role="button" aria-expanded="false" aria-controls="snacks">
+                    Snacks and Confectionery
+                </a>
+                <div class="collapse" id="snacks">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Rice crackers</a></li>
+                        <li class="list-group-item"><a href="#">Prawn crackers</a></li>
+                        <li class="list-group-item"><a href="#">Asian candies and sweets</a></li>
+                        <li class="list-group-item"><a href="#">Dried fruit snacks</a></li>
+                        <li class="list-group-item"><a href="#">Seaweed snacks</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#beverages" role="button" aria-expanded="false" aria-controls="beverages">
+                    Beverages
+                </a>
+                <div class="collapse" id="beverages">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Green tea</a></li>
+                        <li class="list-group-item"><a href="#">Bubble tea supplies</a></li>
+                        <li class="list-group-item"><a href="#">Asian fruit drinks</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#produce" role="button" aria-expanded="false"aria-controls="produce">
+                    Fresh Produce
+                </a>
+                <div class="collapse" id="produce">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Bok choy</a></li>
+                        <li class="list-group-item"><a href="#">Chinese eggplant</a></li>
+                        <li class="list-group-item"><a href="#">Asian herbs</a></li>
+                        <li class="list-group-item"><a href="#">Asian mushrooms</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#seafood" role="button" aria-expanded="false" aria-controls="seafood">
+                    Seafood and Fish
+                </a>
+                <div class="collapse" id="seafood">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Fresh fish</a></li>
+                        <li class="list-group-item"><a href="#">Shrimp</a></li>
+                        <li class="list-group-item"><a href="#">Fish balls</a></li>
+                        <li class="list-group-item"><a href="#">Surimi</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#tofu_soy" role="button" aria-expanded="false" aria-controls="tofu_soy">
+                    Tofu and Soy Products
+                </a>
+                <div class="collapse" id="tofu_soy">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Fresh tofu</a></li>
+                        <li class="list-group-item"><a href="#">Soy milk</a></li>
+                        <li class="list-group-item"><a href="#">Fermented soybean products</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#frozen" role="button" aria-expanded="false" aria-controls="frozen">
+                    Frozen Foods
+                </a>
+                <div class="collapse" id="frozen">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Dumplings</a></li>
+                        <li class="list-group-item"><a href="#">Buns</a></li>
+                        <li class="list-group-item"><a href="#">Frozen vegetables</a></li>
+                        <li class="list-group-item"><a href="#">Frozen dim sum</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <a data-bs-toggle="collapse" href="#health" role="button" aria-expanded="false" aria-controls="health">
+                    Health and Wellness Products
+                </a>
+                <div class="collapse" id="health">
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="#">Herbal teas and remedies</a></li>
+                        <li class="list-group-item"><a href="#">Traditional Chinese medicine ingredients</a></li>
+                        <li class="list-group-item"><a href="#">Dietary supplements</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--        </ul>-->
+    </div>
+</div>
+
+<footer class="bg-success text-center text-light">
+    <p class="m-0">All contents © 2017 <a href="https://greatasianmarket.com">GAM</a></p>
+    <p class="m-0">All rights reserved.</p>
+</footer>
 </body>
 </html>
