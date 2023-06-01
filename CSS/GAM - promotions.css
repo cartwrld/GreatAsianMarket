@@ -1,0 +1,53 @@
+html {
+    background-color: floralwhite;
+    font-family: Arial;
+}
+
+section{
+    margin-left: 100px;
+}
+header {
+    font-size: larger;
+
+    padding-left: 5%;
+    background-color:  #28a745;
+
+    display: flex;
+    align-items: center;
+}
+header h1 {
+    font-size: 40px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+header nav .logo, header nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a{
+    margin-left: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    width: 50%;
+
+}
+
+div#promo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#promo img {
+    width: 600px;
+    height: 800px;
+}

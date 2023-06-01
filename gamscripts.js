@@ -44,6 +44,15 @@ $(function () {
             }, 500);
         }
     });
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll > 0) {
+            $("#navbar").addClass("shrink");
+        } else {
+            $("#navbar").removeClass("shrink");
+        }
+    });
     
     
 });

@@ -25,6 +25,8 @@
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzUFkqwX5Nsd9WYQnLIldk709WbFrxVrk&callback=initMap">
     </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gamscripts.js" defer></script>
     <title>Title</title>
     <style>
         li {
@@ -45,9 +47,20 @@
             color: rgba(185, 185, 185, 0.57);
             font-weight: lighter;
         }
+        .navbar.shrink {
+            padding: 10px 0;
+            transition: padding 0.3s;
+        }
+
+        .navbar.shrink .navbar-brand {
+            font-size: 20px;
+        }
+
+        .navbar.shrink .navbar-nav .nav-link {
+            padding: 5px 10px;
+        }
     </style>
-    <link rel="stylesheet" href="styles.css">
-    <script src="gamscripts.js" defer></script>
+
 </head>
 <body>
 <!--<header>-->

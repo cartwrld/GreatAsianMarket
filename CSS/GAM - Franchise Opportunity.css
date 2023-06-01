@@ -1,0 +1,132 @@
+    html {
+        background-color: floralwhite;
+        font-family: Arial;
+    }
+
+    body {
+        width: 90%;
+    }
+     div#div2 {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+         display: grid;
+         grid-template-columns: 1fr 1fr; /* It creates two columns with equal width */
+         gap: 2%; /* It sets the size of the gap between the grid cells */
+    }
+    footer {
+        background-color: #28a745;
+    }
+    header {
+        font-size: larger;
+
+        padding-left: 5%;
+        background-color: #28a745;
+
+        display: flex;
+        align-items: center;
+    }
+    header h1 {
+        font-size: 40px;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header nav .logo, header nav .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu a{
+        margin-left: 20px;
+    }
+
+    header img {
+        border-radius: 50%;
+        width: 50%
+    }
+
+    section.faq div {
+        border: 1px solid #28a745;
+        border-radius: 15px;
+        padding-left: 1em;
+    }
+
+
+    form {
+        padding: 20px;
+        border: 1px solid #28a745;
+        border-radius: 15px;
+        background-color: #fff;
+    }
+
+    form label {
+        display: block;
+        margin: 10px 20px;
+    }
+
+    form input[type="text"], form input[type="email"], form input[type="tel"], form select, form textarea {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form textarea {
+        resize: vertical;
+    }
+
+    form input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #4F65BD;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #28a745;
+    }
+
+    div.faq-item{
+        background-color: #fff;;
+    }
+
+    h1,h2,h3 {
+        color:#0F63A2 ;
+    }
+
+    div.faq-item p {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    .carousel-inner img {
+        height: 500px; /* Change from 500px to 100% */
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #demo {
+        margin: auto;
+    }
+
+    .carousel-inner {
+        width: 100%;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+
+        object-fit: cover;
+    }
