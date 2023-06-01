@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*
+   Filename:   styles.css
+   Author:     Carter Walsh (CST148)
+   Date:       2023-05-30
+   Purpose:
+*/
+
+body, header, footer, main, section,
+article, aside, span, img, nav, div,
+ul, li, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+/*#cardholder {*/
+/*    display: flex;*/
+/*    flex-flow: row wrap;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.bottom_card {*/
+/*    border: 1px solid black;*/
+/*    width: 40%;*/
+
+/*}*/
+
+@media screen {
+    
+}
+#map {
+    
+}
