@@ -27,9 +27,50 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
 
 /*}*/
 
-@media screen {
-    
+
+/* ====== NAV STYLES ====== */
+li {
+    text-wrap: none;
 }
+.list-group-item a {
+    color: black;
+    text-decoration: none;
+}
+footer a {
+    color: ghostwhite;
+}
+.nav-separator {
+    line-height: 15px;
+    font-size: 2em;
+    color: rgba(185, 185, 185, 0.57);
+    font-weight: lighter;
+}
+
+
 #map {
-    
+    height: 400px;
+}
+@media only screen and (max-width: 390px) {
+    .nav-separator {
+        display: none;
+    }
+    #map {
+        height: 400px;
+    }
+    #contact_info {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 1719px) {
+
+    .nav-separator {
+        line-height: 35px;
+        font-size: 2em;
+        color: rgba(185, 185, 185, 0.57);
+        font-weight: lighter;
+    }
 }

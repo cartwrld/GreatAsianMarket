@@ -7,6 +7,7 @@ class Contact {
         this.email = email;
     }
 }
+
 class Location {
     constructor(id, storeName, streetAddress, cityDetails, phone, email, latitude, longitude) {
         this.id = id;
@@ -21,8 +22,6 @@ class Location {
 }
 
 
-
-
 const locationCBO = $('#location_cbo');
 
 
@@ -33,31 +32,72 @@ let marker;
 $(function () {
     
     estLocationList()
-    loadMap(locationList[0]);
+    console.log("finished")
+    loadMap(locationList[0]).then(
     
-    $('#contactUsNavItem').on("click", function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
+    $('#contactUsNavItem').click(function() {
+        
+        let $this = $(this);
+        
+        setTimeout(function() {
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 500);
-        }
-    });
-
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        if (scroll > 0) {
-            $("#navbar").addClass("shrink");
-        } else {
-            $("#navbar").removeClass("shrink");
-        }
-    });
+                scrollTop: $this.offset().top + $('#contact_card').offset().top
+            }, 500, 'easeout')
+        }, 10)
+    }));
     
     
 });
 
 
+/**
+ * Google Maps API to show the current location that is selected in the <select> element
+ */
+async function initMap() {
+    estLocationList();
+    
+    let lat = locationList[0].latitude
+    let lon = locationList[0].longitude
+
+    // Create a map object and specify the center coordinates and zoom level
+    let initMap = await new google.maps.Map(document.getElementById('map'), {
+        center: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
+        zoom: 15
+    });
+
+    // Add a marker to the map
+    let initMarker = await new google.maps.Marker({
+        position: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
+        map: initMap,
+        title: `${location.storeName}`
+    });
+    
+}
+
+
+
+/**
+ * Google Maps API to show the current location that is selected in the <select> element
+ */
+async function loadMap(location) {
+    
+    let lat = location.latitude
+    let lon = location.longitude
+    
+    // Create a map object and specify the center coordinates and zoom level
+    map = await new google.maps.Map(document.getElementById('map'), {
+        center: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
+        zoom: 15
+    });
+    
+    // Add a marker to the map
+    marker = await new google.maps.Marker({
+        position: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
+        map: map,
+        title: `${location.storeName}`
+    });
+    
+}
 
 $(locationCBO).change(function () {
     
@@ -81,46 +121,7 @@ $(locationCBO).change(function () {
         
     }
 });
-
-function updateMapLocation(lat, lon) {
-
-}
-
-
-
-// $(locationCBO).change(function () {
-//
-//
-//
-// });
-
-
-/**
- * Google Maps API to show the current location that is selected in the <select> element
- */
-function loadMap(location) {
-    
-    let lat = location.latitude
-    let lon = location.longitude
-    
-    // Create a map object and specify the center coordinates and zoom level
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
-        zoom: 15
-    });
-    
-    // Add a marker to the map
-    marker = new google.maps.Marker({
-        position: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
-        map: map,
-        title: `${location.storeName}`
-    });
-    
-}
-
-
 function estLocationList() {
-
     
     
     locationList.push(new Location(
@@ -132,8 +133,7 @@ function estLocationList() {
         "gamskoffice@gmail.com",
         52.114032,
         -106.626533
-
-));
+    ));
     
     locationList.push(new Location(
         "SW",
@@ -144,7 +144,7 @@ function estLocationList() {
         "gamskoffice@gmail.com",
         52.130063,
         -106.726319
-        ));
+    ));
     
     locationList.push(new Location(
         "RE",
@@ -166,7 +166,7 @@ function estLocationList() {
         "gamskoffice@gmail.com",
         50.474267,
         -104.616656
-        ));
+    ));
     
     locationList.push(new Location(
         "PA",
@@ -177,7 +177,7 @@ function estLocationList() {
         "gamskoffice@gmail.com",
         53.186472,
         -105.761916
-        ));
+    ));
     
     locationList.push(new Location(
         "WA",
