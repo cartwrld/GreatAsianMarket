@@ -8,6 +8,8 @@
     <!-- Bootstrap - Latest compiled and minified CSS -->
     <link rel="stylesheet" href="bootstrap-5.3.0/css">
     <script src="bootstrap-5.3.0/js" defer></script>
+<!--    <script src="bootstrap-icons-1.10.5/font" defer></script>-->
+<!--    <script src="bootstrap-icons-1.10.5/" defer></script>-->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -15,30 +17,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzUFkqwX5Nsd9WYQnLIldk709WbFrxVrk&callback=initMap"></script>
 
     <title>Title</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="gamscripts.js" defer></script>
+
+    <style>
+        ol a {
+            font-weight: 500;
+            color: #198754;
+        }
+
+        .product_tree_cat {
+            font-weight: 500;
+        }
+
+        #items_container {
+            overflow-y: scroll;
+        }
+
+    </style>
 </head>
 <body>
 
 <!--<header>-->
-<nav class="navbar navbar-expand-lg bg-success navbar-dark sticky-top rounded-bottom">
+<nav class="navbar navbar-expand-lg bg-success navbar-dark sticky-top">
     <div class="container-fluid ">
 
         <div class="container-fluid text-center d-flex flex-row flex wrap  align-items-center">
-            <a class=href="#">
+            <a class=href="easteregg.html">
                 <img src="media/GAM_logo.png" alt="GAM Logo" style="width:135px;">
             </a>
             <div class="container-fluid ">
                 <div class="navbar-text text-center h1 h6-xl">Great Asian Market</div>
             </div>
-        <button class="navbar-toggler mt-xl-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler mt-xl-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
         <div class="container-fluid collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav container h5">
@@ -76,154 +93,166 @@
 </nav>
 <!--</header>-->
 
-<div class="container-fluid">
+<div class="container-fluid border-bottom border-grey border-1 h-auto ">
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+        <ol class="breadcrumb m-0">
+            <li class="breadcrumb-item p-1"><a href="home.html">Home</a></li>
+            <li class="breadcrumb-item p-1"><a href="productcatalog.html">Products</a></li>
+            <li class="breadcrumb-item p-1 active" aria-current="page">All Products</li>
         </ol>
     </nav>
 </div>
 
-<div class="container col4">
-    <div class="row">Product List</div>
-    <div class="container">
+<div class="container-fluid d-flex flex-row"> <!-- main container -->
 
+
+    <div class="container bg-light p-3 m-0 col-4">
         <ul class="list-group">
             <li class="list-group-item">
                 <a data-bs-toggle="collapse" href="#rice_grains" role="button" aria-expanded="false"
-                   aria-controls="rice_grains">
-                    Rice and Grains <i class="bi bi-caret-right"></i>
+                   aria-controls="rice_grains" class="product_tree_cat">
+                    Rice and Grains <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="rice_grains">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Rice</a></li>
-                        <li class="list-group-item"><a href="#">Rice noodles, vermicelli</a></li>
-                        <li class="list-group-item"><a href="#">Noodles and Pasta</a></li>
-                        <li class="list-group-item"><a href="#">Instant noodles</a></li>
-                        <li class="list-group-item"><a href="#">Wheat noodles</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Rice</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Rice noodles, vermicelli</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Noodles and Pasta</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Instant noodles</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Wheat noodles</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
                 <a data-bs-toggle="collapse" href="#sauce_condiments" role="button" aria-expanded="false"
-                   aria-controls="sauce_condiments">
+                   aria-controls="sauce_condiments" class="product_tree_cat">
                     Sauces and Condiments
-                </a>
+                </a> <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 <div class="collapse" id="sauce_condiments">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Soy sauce</a></li>
-                        <li class="list-group-item"><a href="#">Fish sauce</a></li>
-                        <li class="list-group-item"><a href="#">Oyster sauce</a></li>
-                        <li class="list-group-item"><a href="#">Hoisin sauce</a></li>
-                        <li class="list-group-item"><a href="#">Chili sauce</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Soy sauce</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Fish sauce</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Oyster sauce</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Hoisin sauce</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Chili sauce</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
-                <a data-bs-toggle="collapse" href="#snacks" role="button" aria-expanded="false" aria-controls="snacks">
-                    Snacks and Confectionery
+                <a data-bs-toggle="collapse" href="#snacks" role="button" aria-expanded="false" aria-controls="snacks"
+                   class="product_tree_cat">
+                    Snacks and Confectionery <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="snacks">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Rice crackers</a></li>
-                        <li class="list-group-item"><a href="#">Prawn crackers</a></li>
-                        <li class="list-group-item"><a href="#">Asian candies and sweets</a></li>
-                        <li class="list-group-item"><a href="#">Dried fruit snacks</a></li>
-                        <li class="list-group-item"><a href="#">Seaweed snacks</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Rice crackers</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Prawn crackers</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Asian candies and sweets</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Dried fruit snacks</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Seaweed snacks</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
                 <a data-bs-toggle="collapse" href="#beverages" role="button" aria-expanded="false"
-                   aria-controls="beverages">
-                    Beverages
+                   aria-controls="beverages" class="product_tree_cat">
+                    Beverages <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="beverages">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Green tea</a></li>
-                        <li class="list-group-item"><a href="#">Bubble tea supplies</a></li>
-                        <li class="list-group-item"><a href="#">Asian fruit drinks</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Green tea</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Bubble tea supplies</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Asian fruit drinks</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
-                <a data-bs-toggle="collapse" href="#produce" role="button" aria-expanded="false"
-                   aria-controls="produce">
-                    Fresh Produce
+                <a data-bs-toggle="collapse" href="#produce" role="button" aria-expanded="false" aria-controls="produce"
+                   class="product_tree_cat">
+                    Fresh Produce <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="produce">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Bok choy</a></li>
-                        <li class="list-group-item"><a href="#">Chinese eggplant</a></li>
-                        <li class="list-group-item"><a href="#">Asian herbs</a></li>
-                        <li class="list-group-item"><a href="#">Asian mushrooms</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Bok choy</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Chinese eggplant</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Asian herbs</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Asian mushrooms</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
-                <a data-bs-toggle="collapse" href="#seafood" role="button" aria-expanded="false"
-                   aria-controls="seafood">
-                    Seafood and Fish
+                <a data-bs-toggle="collapse" href="#seafood" role="button" aria-expanded="false" aria-controls="seafood"
+                   class="product_tree_cat">
+                    Seafood and Fish <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="seafood">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Fresh fish</a></li>
-                        <li class="list-group-item"><a href="#">Shrimp</a></li>
-                        <li class="list-group-item"><a href="#">Fish balls</a></li>
-                        <li class="list-group-item"><a href="#">Surimi</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Fresh fish</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Shrimp</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Fish balls</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Surimi</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
                 <a data-bs-toggle="collapse" href="#tofu_soy" role="button" aria-expanded="false"
-                   aria-controls="tofu_soy">
-                    Tofu and Soy Products
+                   aria-controls="tofu_soy" class="product_tree_cat">
+                    Tofu and Soy Products <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="tofu_soy">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Fresh tofu</a></li>
-                        <li class="list-group-item"><a href="#">Soy milk</a></li>
-                        <li class="list-group-item"><a href="#">Fermented soybean products</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Fresh tofu</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Soy milk</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Fermented soybean products</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
-                <a data-bs-toggle="collapse" href="#frozen" role="button" aria-expanded="false" aria-controls="frozen">
-                    Frozen Foods
+                <a data-bs-toggle="collapse" href="#frozen" role="button" aria-expanded="false" aria-controls="frozen"
+                   class="product_tree_cat">
+                    Frozen Foods <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="frozen">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Dumplings</a></li>
-                        <li class="list-group-item"><a href="#">Buns</a></li>
-                        <li class="list-group-item"><a href="#">Frozen vegetables</a></li>
-                        <li class="list-group-item"><a href="#">Frozen dim sum</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Dumplings</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Buns</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Frozen vegetables</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Frozen dim sum</a></li>
                     </ul>
                 </div>
             </li>
             <li class="list-group-item">
-                <a data-bs-toggle="collapse" href="#health" role="button" aria-expanded="false" aria-controls="health">
-                    Health and Wellness Products
+                <a data-bs-toggle="collapse" href="#health" role="button" aria-expanded="false" aria-controls="health"
+                   class="product_tree_cat">
+                    Health and Wellness Products <i class="bi bi-caret-right-fill mx-2 caret_icon"></i>
                 </a>
                 <div class="collapse" id="health">
                     <ul class="list-group">
-                        <li class="list-group-item"><a href="#">Herbal teas and remedies</a></li>
-                        <li class="list-group-item"><a href="#">Traditional Chinese medicine ingredients</a></li>
-                        <li class="list-group-item"><a href="#">Dietary supplements</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Herbal teas and remedies</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Traditional Chinese medicine ingredients</a></li>
+                        <li class="list-group-item"><a href="#" class="product_tree_item">Dietary supplements</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
+    </div>
 
 
-        <!--        </ul>-->
+    <div class="container-fluid d-flex flex-row flex-wrap vh-100 p-4 justify-content-center "
+         id="items_container">
+
+
+
+
+
     </div>
 </div>
 
-<footer class="bg-success text-center text-light">
-    <p class="m-0">All contents © 2017 <a href="https://greatasianmarket.com">GAM</a></p>
-    <p class="m-0">All rights reserved.</p>
+<footer class="footer fixed-bottom bg-success text-center text-light">
+    <div class="p-2">
+        All contents © 2017 <a href="https://greatasianmarket.com">GAM</a> —
+        All rights reserved.
+    </div>
 </footer>
 </body>
 </html>

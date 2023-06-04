@@ -21,6 +21,18 @@ class Location {
     }
 }
 
+let catName;
+let itemName;
+let ptc = $('.product_tree_cat');
+
+function buildBreadCrumbTrail(category, item,) {
+    let base = ["Home", "Products", category, item];
+    
+    let bc = $('.breadcrumb').children();
+    bc[2] = `<li class="breadcrumb-item p-1">Home</a></li>`;
+    bc[3] = item;
+}
+
 
 const locationCBO = $('#location_cbo');
 
@@ -32,22 +44,148 @@ let marker;
 $(function () {
     
     estLocationList()
-    console.log("finished")
+    
     loadMap(locationList[0]).then(
+        $('#contactUsNavItem').click(function () {
+            
+            let $this = $(this);
+            
+            setTimeout(function () {
+                $('html, body').animate({
+                    scrollTop: $this.offset().top + $('#contact_card').offset().top
+                }, 500, 'easeout')
+            }, 10)
+        }));
     
-    $('#contactUsNavItem').click(function() {
+    
+    loadAllProducts()
+    $(ptc).on('click', function () {
+        catName = $(this).text().trim();
         
-        let $this = $(this);
+        for (let i=0; i<ptc.length; i++) {
         
-        setTimeout(function() {
-            $('html, body').animate({
-                scrollTop: $this.offset().top + $('#contact_card').offset().top
-            }, 500, 'easeout')
-        }, 10)
-    }));
-    
-    
+        }
+        
+        let icon = $(this).children();
+        let opened = 'bi-caret-down-fill';
+        let closed = 'bi-caret-right-fill';
+        
+        if ($(icon).hasClass(closed)) {
+            $(icon).removeClass(closed);
+            $(icon).addClass(opened);
+        } else if ($(this).children().hasClass(opened)) {
+            $(this).children().removeClass(opened);
+            $(this).children().addClass(closed);
+        } else {
+            console.log("fail")
+            
+        }
+        
+        $(ptc).not(this).each(function () {
+            $($(this).attr('href')).collapse('hide');
+           
+            // $(icon).removeClass(opened);
+            // $(icon).addClass(closed);
+        
+        });
+    });
+    handleProductTreeItemClick();
+    buildBreadCrumbTrail()
 });
+
+function loadAllProducts() {
+    for (let i = 0; i < 36; i++) {
+        $("#items_container").append(createProductCard());
+    }
+}
+
+function handleProductTreeCatClick() {
+    let ptc = $('.product_tree_cat');
+    let cic = $('.caret_icon');
+    // Collapse all other menus
+    
+    
+    // for (let cat of ptc) {
+    for (let i = 0; i < ptc.length; i++) {
+        $(ptc[i]).on('click', function () {
+            console.log($(ptc[i]).text().trim())
+            catName = $(ptc[i]).text().trim();
+            if ($(ptc[i]).hasClass('bi-caret-right-fill')) {
+                $(cic[i]).removeClass('bi-caret-right-fill');
+                $(cic[i]).addClass('bi-caret-down-fill');
+            }
+        })
+        
+        
+    }
+    
+    
+    
+    // console.log(catName)
+    
+    // for (let i = 0; i < ptc.length; i++) {
+    //     $(ptc[i]).click(() => {
+    //
+    //
+    
+    //
+    //         // $(cic[i]).removeClass('bi-caret-right-fill');
+    //         // $(cic[i]).addClass('bi-caret-down-fill');
+    //         // $(ptc[i]).click(function rmvLstnr() {
+    //         //     $(cic[i]).removeClass('bi-caret-down-fill');
+    //         //     $(cic[i]).addClass('bi-caret-right-fill');
+    //         //     ptc[i].removeEventListener(rmvLstnr, ptc[i]);
+    //         // });
+    //     })
+    // }
+    
+}
+
+
+function createProductCard() {
+    return `
+        <div class="container bg-success m-4 col-xxl-3 col-xl-4 col-lg-4 col-md-10 col-sm-10 text-light h-auto
+        d-flex flex-column rounded p-3 ">
+            <div class="row">
+                <img src="media/image-coming-soon.jpg" alt="Image coming soon" class="rounded col">
+            </div>
+            <div class="container d-flex flex-column pt-2">
+                <div>
+                    <strong class="h4">Product Name</strong>
+                </div>
+                <div>
+                    <em>Product Manufacturer</em>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-end align-items-center pt-2">
+                <strong class="h5">$${Math.floor(Math.random() * 15)}.99</strong>
+            </div>
+        </div>
+`
+}
+
+function handleProductTreeItemClick() {
+    let pti = $('.product_tree_item');
+    
+    for (let i = 0; i < pti.length; i++) {
+        $(pti[i]).click(() => {
+            itemName = $(pti[i]).html().trim();
+            
+            
+            console.log(itemName)
+            
+            
+            $('#items_container').html("");
+            
+            let itemCount = Math.floor(Math.random() * (14 - 7) + 7);
+            
+            for (let i = 0; i < itemCount; i++) {
+                $("#items_container").append(createProductCard())
+            }
+        })
+    }
+    
+}
 
 
 /**
@@ -58,13 +196,13 @@ async function initMap() {
     
     let lat = locationList[0].latitude
     let lon = locationList[0].longitude
-
+    
     // Create a map object and specify the center coordinates and zoom level
     let initMap = await new google.maps.Map(document.getElementById('map'), {
         center: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
         zoom: 15
     });
-
+    
     // Add a marker to the map
     let initMarker = await new google.maps.Marker({
         position: {lat: lat, lng: lon}, // Saskatoon East latitude/longitude
@@ -73,7 +211,6 @@ async function initMap() {
     });
     
 }
-
 
 
 /**
@@ -121,6 +258,7 @@ $(locationCBO).change(function () {
         
     }
 });
+
 function estLocationList() {
     
     
