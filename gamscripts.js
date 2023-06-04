@@ -42,6 +42,8 @@ let map;
 let marker;
 
 $(function () {
+    updateTextareaRows();
+    window.onresize = updateTextareaRows;
     
     estNavBar()
     estLocationList()
@@ -86,31 +88,21 @@ $(function () {
             
             
         });
-      
-        
-        // if ($(icon).hasClass(closed)) {
-        //     $(icon).removeClass(closed);
-        //     $(icon).addClass(opened);
-        // } else
-        //     if ($(this).children().hasClass(opened)) {
-        //     $(this).children().removeClass(opened);
-        //     $(this).children().addClass(closed);
-        // } else {
-        //     // console.log("fail")
-        //
-      
-        //
-        // }
-        //     setTimeout()
-        // $(icon).removeClass(closed);
-        // $(icon).addClass(opened);
-        //
         
         
     });
     handleProductTreeItemClick();
     buildBreadCrumbTrail()
 });
+
+function updateTextareaRows() {
+    let textarea = $('#contactus_message')
+    if (window.innerWidth >= 1200) {  // Check if xl breakpoint is reached (1200px or more)
+        textarea.rows = 4;  // Set rows to 4
+    } else {
+        textarea.rows = 5;  // Set rows to 5 for other breakpoints
+    }
+}
 
 function estNavBar() {
     $('#navbarHTML').html(`

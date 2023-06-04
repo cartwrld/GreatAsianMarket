@@ -23,10 +23,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="gamscripts.js" defer></script>
     <style>
-        #map {
-            /*width: auto;*/
 
-        }
     </style>
 </head>
 <body>
@@ -111,26 +108,44 @@
 <!--=================================================================================================================-->
 
 
-<div id="cardholder" class="container-fluid d-flex flex-row flex-wrap">
+<div id="cardholder" class="container-fluid
+                    d-flex flex-row flex-wrap justify-content-center align-items-center
+                    border border-dark">
 
+<!--  BASE LOCATION CARD  -->
     <div class="bottom_card
     border border-3 border-success
-     container col-12 rounded
+     container col-12
+            col-xxl-6
             col-xl-6
+            col-lg-12
+            col-md-12
+            col-sm-12
             mb-5
             pb-4
+            rounded
+            h-100 clearfix
 " id="location_card">
-        <h2 class="mt-4 mx-4">Locations</h2>
+        <h2 class="my-4 mx-4">Locations</h2>
 
-
-        <div class="container-fluid d-flex flex-wrap justify-content-between">
+        <!--  SELECT/TABLE + MAP CONTAINER  -->
+        <div class="container d-flex flex-row flex-wrap flex-sm-wrap justify-content-center" id="location_inner">
             <!-- container for selecttable container and map -->
-            <div class="container col-6
-                    col-xl-5
+        <!--  SELECT / TABLE CONTAINER  -->
+            <div class="flex-fill container col-3
+                    col-xxl-6
+                    col-xl-6
+                    col-lg-6
+                    col-md-5
+                    col-sm-6
+
+                    pb-3
+
 "> <!-- container for select and table -->
-                <div class="container pb-5 mb-4"> <!-- container for select -->
+<!--                    mx-5-->
+                <div class="container pb-5 mb-4 pb-sm-0 m-sm-0" id="location_select_cont" > <!-- container for select -->
                     <select id="location_cbo"
-                            class="col p-1 h6 container-fluid mt-5 border border-success border-2 rounded">
+                            class="col p-1 h6 container mt-5 border border-success border-2 rounded ml-0">
                         <option value="SE">Saskatoon East - Store</option>
                         <option value="SW">Saskatoon West - Store</option>
                         <option value="RE">Regina East - Store</option>
@@ -140,38 +155,46 @@
                     </select>
                 </div> <!-- END container for select -->
 
-                <div class="col pt-5 mt-5"> <!-- container for table -->
-                    <table class="table mx-2">
-                        <tbody class="mx-2">
+                <div class="col pt-5 mt-5 pt-sm-0 mt-sm-0" id="table_cont"> <!-- container for table -->
+                    <table class="table mr-2">
+                        <tbody class="mr-2">
                         <tr>
-                            <th class="h5 col-1">Address:</th>
-                            <td class="h6 col-5 align-middle">
+                            <th class="h5 ">Address:</th>
+                            <td class="h6 align-middle">
                                 <span id="loc_street">1110 Grosvenor Ave</span><br/>
                                 <span id="loc_cpp">Saskatoon, SK, S7H 4G1</span>
+
                             </td>
                         </tr>
                         <tr>
-                            <th class="h5 col-1">Phone:</th>
+                            <th class="h5">Phone:</th>
                             <td id="loc_phone" class="h6 align-middle">306-952-3377</td>
                         </tr>
                         <tr>
-                            <th class="h5 col-1">Email:</th>
+                            <th class="h5">Email:</th>
                             <td id="loc_email" class="h6 align-middle">gamskoffice@gmail.com</td>
                         </tr>
                         </tbody>
                     </table>
                 </div> <!-- END container for table -->
             </div> <!-- END container for select and table -->
-            <div class="container col-6 bg-light d-flex justify-content-center align-items-center
+            <div class="flex-fill container col bg-light d-flex justify-content-center align-items-center h-auto
+                        col-xxl-6
                         col-xl-5
-                        col-lg-5
-                        col-m-3
-                        py-1
-                        px-1
+                        col-lg-6
+                        col-md-6
+                        col-sm-10
+                        h-100
+                        p-2
+                        my0
                         rounded-3
-                        border border-2 border-success
+                        border border-2 border-success clearfix
 "> <!-- container for map -->
-                <div id="map" class="border border-2 w-100 h-100 rounded" onload="initMap()">
+<!--                        py-1-->
+<!--                        px-1-->
+                <div id="map" class="border border-2 border-light-subtle w-100 h-100 rounded m-0 p-0 h-100
+
+                    " onload="initMap()" style="min-height: 300px;">
 
                 </div>
             </div> <!-- END container for select and table -->
@@ -180,33 +203,41 @@
 
 
     <div class="bottom_card
-    border border-3
-    border-success
-     container col-12 rounded
+    border border-3 border-success
+     container
+            col-xxl-5
             col-xl-5
+            col-lg-12
+            col-md-12
+            col-sm-12
             mb-5
-            pb-2
+            pb-4
+            rounded
 
         " id="contact_card">
+        <div class="p-2">
+
         <h2 class="mt-4 mx-4">Contact Us</h2>
-        <div class="container mt-4 pt-3">
+        <div class="container mt-4 pt-3 pt-xl-0">
             <form class="">
-                <div class="row mb-4 px-3">
+                <div class="row px-3 d-xl-flex flex-xl-column flex-sm-column">
                     <div class="col">
                         <label for="contactus_name" class="form-label h5">Name</label>
                         <input type="text" class="form-control border border-success border-2" id="contactus_name"
                                placeholder="Enter your name">
                     </div>
-                    <div class="col">
+                    <div class="col mt-xl-3 mt-sm-3">
                         <label for="contactus_email" class="form-label h5">Email</label>
                         <input type="email" class="form-control border border-success border-2" id="contactus_email"
                                placeholder="Enter your email">
                     </div>
                 </div>
-                <div class="my-4 px-3 pb-2">
+                <div class="mb-4 px-3 pb-2 mt-xl-3 mt-lg-3 mt-md-3 mt-sm-3">
                     <label for="contactus_message" class="form-label h5">Message</label>
-                    <textarea class="form-control border border-success border-2" id="contactus_message" rows="5"
+                    <textarea class="form-control border border-success border-2" id="contactus_message" rows="4"
                               placeholder="Enter your message"></textarea>
+
+
                 </div>
                 <div class="text-end px-3 mt-4 ">
                     <button type="submit" class="btn btn-outline-success align-items-end">Submit</button>
@@ -215,6 +246,7 @@
         </div>
 
 
+    </div>
     </div>
 
 
