@@ -4,15 +4,21 @@ $(function () {
 
     hideFaqParagraphs();
 
-    $("#faq div").click(function () {
+    $(".faq-q").click(function () {
         if ($(window).width() < 768) {
-            $(this).find("p").slideToggle(75);
+            $(this).find("p").slideToggle(500);
         }
     });
 
     // Handle window resize
     $(window).resize(function () {
         hideFaqParagraphs();
+    });
+    
+    $('.faq-item').click(function() {
+        $(this).toggleClass('active');
+        $(this).find('.collapse').collapse('toggle');
+        $('.faq-item').not(this).removeClass('active').find('.collapse').collapse('hide');
     });
 
 
@@ -46,9 +52,9 @@ function formValidate(){
 
 function hideFaqParagraphs() {
     if ($(window).width() < 768) {
-        $("#faq p").hide();
+        $(".faq-ans").hide();
     } else {
-        $("#faq p").show();
+        $(".faq-ans").show();
     }
 }
 

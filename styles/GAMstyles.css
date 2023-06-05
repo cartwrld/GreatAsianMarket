@@ -36,17 +36,29 @@ footer a {
     font-weight: lighter;
 }
 
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
 
-
-/* ====== BODY SCROLLBAR STYLES ====== */
-body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 }
 
-body::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar-track {
+    width: 15px;
+    background-color: rgba(155, 171, 164, 0.5); /* background color of the track */
+    padding-top: 30px;
+    margin-top: 0px;
+    border-radius: 20px; /* rounded corners of the thumb */
+}
 
+::-webkit-scrollbar-thumb {
+    background-color: rgba(25, 135, 84, 0.48); /* color of the scrollbar thumb */
+    border-radius: 20px; /* rounded corners of the thumb */
+    padding: 5px 0;
+    margin-top: -4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 112, 65, 0.51); /* color of the scrollbar thumb on hover */
 }
 
 
@@ -60,11 +72,6 @@ body::-webkit-scrollbar {
         height: fit-content;
     }
 
-
-
-    /*.nav-separator {*/
-    /*    display: none;*/
-    /*}*/
 }
 
 

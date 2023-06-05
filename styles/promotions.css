@@ -3,30 +3,7 @@
 section{
     margin-left: 100px;
 }
-header {
-    font-size: larger;
 
-    padding-left: 5%;
-    background-color:  #28a745;
-
-    display: flex;
-    align-items: center;
-}
-header h1 {
-    font-size: 40px;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-header nav .logo, header nav .menu {
-    display: flex;
-    align-items: center;
-}
 
 .menu a{
     margin-left: 20px;
@@ -50,4 +27,9 @@ div#promo img {
 }
 li {
     list-style-type: none;
+}
+
+.breadcrumb a {
+    font-weight: 500;
+    color: #198754;
 }
