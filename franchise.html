@@ -1,215 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="CSS/GAM - Franchise Opportunity.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
-    <!-- Bootstrap icons -->
+    <!-- Bootstrap - Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.0/css">
+    <script src="bootstrap-5.3.0/js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-    <!-- Bootstrap bundle with Popper - latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="scripts/GAM - Franchise Opportunity.js"></script>
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzUFkqwX5Nsd9WYQnLIldk709WbFrxVrk&callback=initMap"></script>
+
+    <title>Franchise Opportunities - GAM</title>
+
+    <link rel="stylesheet" href="styles/GAMstyles.css">
+    <link rel="stylesheet" href="styles/franchise.css">
+    <script src="gamscripts.js" defer></script>
+    <script src="scripts/franchise.js"></script>
+
+
 </head>
 <body>
-<header>
-    <nav>
-        <div class="logo">
-            <a href="#"><img src="Capture.JPG" alt="Great Asian Market Logo"></a>
-        </div>
-        <div>
-            <h1>Great Asian Market</h1>
-        </div>
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Promotions</a>
-            <a href="#">Product Catalog</a>
-            <a href="#" class="active">Franchise Opportunity</a>
-        </div>
-    </nav>
 
-</header>
+<div id="navbarHTML"></div>
 
-<section id="carousel">
-    <div class="container-fluid" id="promo">
-        <div class="row justify-content-center">
-            <div class = "col-lg-8 col-md-10">
-                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+<div class="container-fluid container border border-2 border-success rounded" id="location_photos">
 
-                    <!-- Indicators -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"
-                                aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid rounded" src="slides/slide1.jpg" alt="New York" width="450" height="450">
+        </div>
+        <div class="col">
+            <img class="img-fluid rounded" src="slides/slide14.jpg" alt="New York" width="450" height="450">
+        </div>
+        <div class="col">
+            <img class="img-fluid rounded" src="slides/slide7.jpg" alt="New York" width="450" height="450">
+        </div>
+        <div class="col">
+            <img class="img-fluid rounded" src="slides/slide10.jpg" alt="New York" width="450" height="450">
+        </div>
+    </div>
+</div>
+
+<!--</header>-->
+
+<div class="container">
+    <div>
+        <h1>Join the Great Asian Market Family!</h1>
+        <p>Are you looking for a promising business opportunity with a leading name in the Asian supermarket industry?
+            We
+            invite you to partner with us and open your own Great Asian Market franchise!</p>
+    </div>
+    <div>
+        <h2>Why Choose Great Asian Market?</h2>
+        <p>As a Great Asian Market franchisee, you'll benefit from our:</p>
+        <ul>
+            <li><strong>Strong Brand Recognition:</strong> We are one of the most trusted names in the Asian supermarket
+                industry.
+            </li>
+            <li><strong>Comprehensive Training:</strong> You will receive thorough training in all aspects of running a
+                successful supermarket.
+            </li>
+            <li><strong>Continuous Support:</strong> We provide continuous assistance in marketing, operations, and
+                customer
+                service to ensure your success.
+            </li>
+            <li><strong>Exclusive Territories:</strong> Each franchisee is given a specific territory to cultivate their
+                customer base.
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2>Our Franchise Opportunities</h2>
+        <p>At the Great Asian Market, we are always seeking passionate individuals who are eager to join our growing
+            family.
+            Here are some key aspects of our franchise opportunities:</p>
+        <dl>
+            <dt><strong>Operational Style:</strong></dt>
+            <dd>We endorse a self-managed operation that empowers our franchisees to take charge and actively
+                participate in
+                their store's growth and success.
+            </dd>
+            <dt><strong>Experience Requirement:</strong></dt>
+            <dd>We expect our franchisees to come equipped with a minimum of 5 years of management experience. This
+                ensures
+                that you're well-prepared to take on the responsibilities that come with running a franchise.
+            </dd>
+            <dt><strong>Get in Touch:</strong></dt>
+            <dd>If our franchise opportunity resonates with you and aligns with your professional aspirations, we'd love
+                to
+                hear from you! Please fill the contact form below or feel free to reach out to us at: <a
+                        href="mailto:gamfinancesk@gmail.com">gamfinancesk@gmail.com</a> for further information or any
+                queries you might have.
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="container" id="div2">
+    <div class="row d-flex align-items-stretch">
+        <div class="col-md-6 col-sm-12 mb-2">
+            <div class="border border-3 pb-4 border-success rounded p-3">
+                <h2>Frequently Asked Questions</h2>
+                <section id="faq">
+                    <div class="faq-item mb-2 p-1 border border-1 border-success rounded">
+                        <h3>What is the initial investment for a franchise?</h3>
+                        <p>The initial investment varies depending on the location and size of the store. Detailed
+                            financial requirements will be discussed during our initial meetings.</p>
                     </div>
-
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="slides/slide1.jpg" class="d-block w-100" alt="Class"/>
-
-                        </div>
-                        <div class="carousel-item">
-                            <img src="slides/slide14.jpg" class="d-block w-100" alt="Student walking through doors"/>
-
-                        </div>
-                        <div class="carousel-item">
-                            <img src="slides/slide7.jpg" class="d-block w-100" alt="Lab tech student"/>
-
-                        </div>
-                        <div class="carousel-item">
-                            <img src="slides/slide10.jpg" class="d-block w-100" alt="Nurse"/>
-
-                        </div>
+                    <div class="faq-item mb-2 p-1 border border-1 border-success rounded">
+                        <h3>Do I need previous experience in retail or supermarkets to own a franchise?</h3>
+                        <p>Yes, we require our franchisees to have at least 5 years of management experience. This
+                            doesn't necessarily have to be in retail or supermarkets, but experience in these fields can
+                            be beneficial. Regardless of your background, our comprehensive training program will equip
+                            you with the knowledge and skills needed to operate your Great Asian Market franchise
+                            successfully.</p>
                     </div>
+                    <div class="faq-item mb-2 p-2 border border-1 border-success rounded">
+                        <h3>What kind of support can I expect as a franchisee?</h3>
+                        <p>We provide continuous support in various areas including marketing, operations, customer
+                            service, and more. Our success is tied to your success, so we are invested in providing the
+                            support you need.</p>
+                    </div>
+                    <div class="faq-item mb-2 p-1 border border-1 border-success rounded">
+                        <h3>How do I get started with the franchising process?</h3>
+                        <p>Start by filling out the inquiry form below. Our team will then contact you to discuss the
+                            opportunity in more detail.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12 mb-2">
+            <div class="border border-3 border-success rounded p-4" id="franchise-inquiry">
+                <h2>Get Started Today!</h2>
+                <form action="/submit-inquiry" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                    <!-- Left and right controls -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                </div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="country">Country of Origin:</label>
+                    <input type="text" id="country" name="country" required>
+
+                    <label for="citizenship-status">What is your citizen status</label>
+                    <select id="citizenship-status" name="citizenship-status" required>
+                        <option value="">Select...</option>
+                        <option value="citizen">Citizen</option>
+                        <option value="permanent resident">Permanent Resident</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="city">City of Interest:</label>
+                    <input type="text" id="city" name="city" required>
+
+                    <label for="business-experience">Business Experience:</label>
+                    <textarea id="business-experience" name="business-experience" rows="4" required></textarea>
+
+                    <label for="comments">Comments/Questions:</label>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                    <input type="submit" value="Submit Inquiry">
+                </form>
             </div>
         </div>
     </div>
-</section>
-
-
-<section class="franchise-intro">
-    <h1>Join the Great Asian Market Family!</h1>
-    <p>Are you looking for a promising business opportunity with a leading name in the Asian supermarket industry? We
-        invite you to partner with us and open your own Great Asian Market franchise!</p>
-</section>
-
-
-<section class="franchise-info">
-    <h2>Why Choose Great Asian Market?</h2>
-    <p>As a Great Asian Market franchisee, you'll benefit from our:</p>
-    <ul>
-        <li><strong>Strong Brand Recognition:</strong> We are one of the most trusted names in the Asian supermarket
-            industry.
-        </li>
-        <li><strong>Comprehensive Training:</strong> You will receive thorough training in all aspects of running a
-            successful supermarket.
-        </li>
-        <li><strong>Continuous Support:</strong> We provide continuous assistance in marketing, operations, and customer
-            service to ensure your success.
-        </li>
-        <li><strong>Exclusive Territories:</strong> Each franchisee is given a specific territory to cultivate their
-            customer base.
-        </li>
-    </ul>
-</section>
-
-<section class="franchise-conditions">
-    <h2>Our Franchise Opportunities</h2>
-    <p>At the Great Asian Market, we are always seeking passionate individuals who are eager to join our growing family.
-        Here are some key aspects of our franchise opportunities:</p>
-    <dl>
-        <dt><strong>Operational Style:</strong></dt>
-        <dd>We endorse a self-managed operation that empowers our franchisees to take charge and actively participate in
-            their store's growth and success.
-        </dd>
-        <dt><strong>Experience Requirement:</strong></dt>
-        <dd>We expect our franchisees to come equipped with a minimum of 5 years of management experience. This ensures
-            that you're well-prepared to take on the responsibilities that come with running a franchise.
-        </dd>
-        <dt><strong>Get in Touch:</strong></dt>
-        <dd>If our franchise opportunity resonates with you and aligns with your professional aspirations, we'd love to
-            hear from you! Please fill the contact form below or feel free to reach out to us at: <a
-                    href="mailto:gamfinancesk@gmail.com">gamfinancesk@gmail.com</a> for further information or any
-            queries you might have.
-        </dd>
-    </dl>
-</section>
-
-<div id="div2">
-    <section class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>What is the initial investment for a franchise?</h3>
-            <p>The initial investment varies depending on the location and size of the store. Detailed financial
-                requirements will be discussed during our initial meetings.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Do I need previous experience in retail or supermarkets to own a franchise?</h3>
-            <p>Yes, we require our franchisees to have at least 5 years of management experience. This doesn't necessarily
-                have to be in retail or supermarkets, but experience in these fields can be beneficial. Regardless of your
-                background, our comprehensive training program will equip you with the knowledge and skills needed to
-                operate your Great Asian Market franchise successfully.</p>
-        </div>
-        <div class="faq-item">
-            <h3>What kind of support can I expect as a franchisee?</h3>
-            <p>We provide continuous support in various areas including marketing, operations, customer service, and more.
-                Our success is tied to your success, so we are invested in providing the support you need.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How do I get started with the franchising process?</h3>
-            <p>Start by filling out the inquiry form below. Our team will then contact you to discuss the opportunity in
-                more detail.</p>
-        </div>
-    </section>
-    <section class="franchise-inquiry">
-        <h2>Get Started Today!</h2>
-        <form action="/submit-inquiry" method="POST">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="country">Country of Origin:</label>
-            <input type="text" id="country" name="country" required>
-
-            <label for="citizenship-status">What is your citizen status</label>
-            <select id="citizenship-status" name="citizenship-status" required>
-                <option value="">Select...</option>
-                <option value="citizen">Citizen</option>
-                <option value="permanent resident">Permanent Resident</option>
-                <option value="other">Other</option>
-            </select>
-
-            <label for="city">City of Interest:</label>
-            <input type="text" id="city" name="city" required>
-
-            <label for="business-experience">Business Experience:</label>
-            <textarea id="business-experience" name="business-experience" rows="4" required></textarea>
-
-
-            <label for="comments">Comments/Questions:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
-            <input type="submit" value="Submit Inquiry">
-        </form>
-    </section>
 </div>
 
-
-<footer>
-    <div class="footer-content">
-        <p>© 2023 Great Asian Market. All rights reserved.</p>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+<footer class="footer bg-success text-center text-light">
+    <div class="p-2">
+        All contents © 2017 <a href="https://greatasianmarket.com">GAM</a> —
+        All rights reserved.
     </div>
 </footer>
+
 </body>
 
 </html>

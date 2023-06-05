@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/*
+   Filename:   products.css
+   Author:     Carter Walsh (CST148)
+   Date:       2023-06-04
+   Purpose:
+*/
+
+
+
+/* For WebKit browsers (Chrome, Safari) */
+#items_container::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+
+}
+
+#items_container::-webkit-scrollbar-track {
+    width: 15px;
+    background-color: rgba(155, 171, 164, 0.5); /* background color of the track */
+    margin-top: 40px;
+    border-radius: 20px; /* rounded corners of the thumb */
+}
+
+#items_container::-webkit-scrollbar-thumb {
+    background-color: rgba(25, 135, 84, 0.48); /* color of the scrollbar thumb */
+    border-radius: 20px; /* rounded corners of the thumb */
+    padding: 5px 0;
+    margin-top: -4px;
+}
+
+#items_container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(10, 112, 65, 0.51); /* color of the scrollbar thumb on hover */
+}
+
+ol a {
+    font-weight: 500;
+    color: #198754;
+}
+
+.product_tree_cat {
+    font-weight: 500;
+}
+
+#items_container {
+    overflow-y: scroll;
+}
