@@ -31,7 +31,7 @@ $(function () {
 
 function estNavBar() {
     $('#navbarHTML').html(`
-    <nav class="navbar navbar-expand-lg bg-success navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg bg-success navbar-dark sticky-top shadow">
     <div class="container-fluid ">
 
         <div class="container-fluid text-center d-flex flex-row flex wrap  align-items-center">
