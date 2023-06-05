@@ -2,9 +2,9 @@
 
 /*
    Filename:   GAMstyles.css
-   Author:     Carter Walsh (CST148)
+   Author:     Carter Walsh & Camilo Silva-Gutierrez
    Date:       2023-05-30
-   Purpose:
+   Purpose:    CWEB195 Final Project - Great Asian Market
 */
 
 body, header, footer, main, section,
@@ -13,7 +13,6 @@ ul, li, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
-
 
 /* ====== NAV STYLES ====== */
 li {
@@ -36,10 +35,10 @@ footer a {
     font-weight: lighter;
 }
 
+
 /* For WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
     width: 10px; /* width of the scrollbar */
-
 }
 
 ::-webkit-scrollbar-track {
@@ -62,7 +61,6 @@ footer a {
 }
 
 
-/* ======  ====== */
 @media only screen and (max-width: 767px) {
     #location_card {
         height: fit-content;
@@ -74,9 +72,7 @@ footer a {
 
 }
 
-
 @media only screen and (max-width: 1567px) {
-
     .nav-separator {
         line-height: 39px;
         font-size: 2em;

@@ -1,18 +1,23 @@
+@charset "UTF-8";
 
+/*
+   Filename:   GAMstyles.css
+   Author:     Carter Walsh & Camilo Silva-Gutierrez
+   Date:       2023-05-30
+   Purpose:    CWEB195 Final Project - Great Asian Market
+*/
 
-section{
+section {
     margin-left: 100px;
 }
 
-
-.menu a{
+.menu a {
     margin-left: 20px;
 }
 
 header img {
     border-radius: 50%;
     width: 50%;
-
 }
 
 div#promo {
@@ -25,6 +30,7 @@ div#promo img {
     width: 600px;
     height: 800px;
 }
+
 li {
     list-style-type: none;
 }

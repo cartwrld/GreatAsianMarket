@@ -23,9 +23,8 @@ $(function () {
 
 
     formValidate();
-
+    
 });
-
 
 function formValidate(){
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
